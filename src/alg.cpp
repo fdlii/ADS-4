@@ -7,6 +7,7 @@ int bsearch(int* arr, int len, int value) {
     if (arr[len / 2] == value) return value;
     if (arr[len / 2] > value) return bsearch(arr, len / 2, value);
     if (arr[len / 2] < value) return bsearch(arr + len / 2, len / 2, value);
+    return 0;
 }
 
 int countPairs1(int *arr, int len, int value) {

@@ -1,5 +1,7 @@
 // Copyright 2021 NNTU-CS
+#include <iostream>
 #include <algorithm>
+using namespace std;
 
 int bsearch(int* arr, int len, int value) {
     if (len == 0) return 0;

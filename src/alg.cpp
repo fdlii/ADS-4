@@ -1,3 +1,6 @@
+// Copyright 2021 NNTU-CS
+#include <algorithm>
+
 int bsearch(int* arr, int len, int value) {
     if (len == 0) return 0;
     if (arr[len / 2] == value) return value;

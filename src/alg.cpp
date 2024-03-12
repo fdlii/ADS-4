@@ -43,5 +43,5 @@ int countPairs3(int *arr, int len, int value) {
         x = value - arr[i];
         if (x == bsearch(arr + i + 1, len - 1 - i, x)) count++;
     }
-    return count+1;
+    return count;
 }

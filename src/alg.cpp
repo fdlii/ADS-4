@@ -10,6 +10,16 @@ int bsearch(int* arr, int len, int value) {
     return 0;
 }
 
+int countPairs3(int *arr, int len, int value) {
+    std::sort(arr, arr + len);
+    int x, count = 0;
+    for (int i = 0; i < len - 1; i++) {
+        x = value - arr[i];
+        if (x == bsearch(arr + i + 1, len - 1 - i, x)) count++;
+    }
+    return count;
+}
+
 int countPairs1(int *arr, int len, int value) {
     std::sort(arr, arr+len);
     int count = 0;
@@ -35,13 +45,4 @@ int countPairs2(int *arr, int len, int value) {
         }
     }
     return countPairs3(arr, len, value);
-}
-int countPairs3(int *arr, int len, int value) {
-    std::sort(arr, arr + len);
-    int x, count = 0;
-    for (int i = 0; i < len - 1; i++) {
-        x = value - arr[i];
-        if (x == bsearch(arr + i + 1, len - 1 - i, x)) count++;
-    }
-    return count;
 }

@@ -32,6 +32,7 @@ int countPairs1(int *arr, int len, int value) {
 }
 int countPairs2(int *arr, int len, int value) {
     std::sort(arr, arr + len);
+    int len1 = len;
     int count = 0;
     for (int i = 0; i < len - 1; i++) {
         for (int j = len - 1; j > i; j--) {
@@ -44,5 +45,5 @@ int countPairs2(int *arr, int len, int value) {
             }
         }
     }
-    return countPairs3(arr, len, value);
+    return countPairs3(arr, len1, value);
 }

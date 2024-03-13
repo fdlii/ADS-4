@@ -1,6 +1,7 @@
 // Copyright 2021 NNTU-CS
 #include <iostream>
 #include <algorithm>
+#include <unistd.h>
 
 int bsearch(int* arr, int len, int value) {
     if (len == 0) return 0;
@@ -21,6 +22,7 @@ int countPairs3(int *arr, int len, int value) {
 }
 
 int countPairs1(int *arr, int len, int value) {
+    sleep(10);
     std::sort(arr, arr+len);
     int count = 0;
     for (int i = 0; i < len - 1; i++) {

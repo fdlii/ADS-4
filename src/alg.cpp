@@ -1,7 +1,7 @@
 // Copyright 2021 NNTU-CS
+#include <unistd.h>
 #include <iostream>
 #include <algorithm>
-#include <unistd.h>
 
 int bsearch(int* arr, int len, int value) {
     if (len == 0) return 0;
